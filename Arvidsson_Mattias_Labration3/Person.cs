@@ -14,16 +14,16 @@ namespace Arvidsson_Mattias_Labration3
         // Attribut för personens hårdetaljer med en privat set-metod för att säkerställa inkapsling.
         public Hair HairDetails { get; private set; }
         // Attribut för personens födelsedatum med en privat set-metod för att säkerställa inkapsling.
-        public DateTime Birthday { get; private set; }
-        // Attribut för personens ögonfärg med en öppen set-metod för att säkerställa inkapsling.
+        public DateTime Birthdate { get; private set; }
+        // Attribut för personens ögonfärg med en privat set-metod för att säkerställa inkapsling.
         public string? EyeColor { get; private set; }
 
         // Konstruktor som används för att skapa en instans av Person med specificerade attribut.
-        public Person(Gender gender, Hair hair, DateTime birthdate, string eyeColor)
+        public Person(Gender gender, Hair hair, DateTime birthday, string eyeColor)
         {
             Gender = gender;
             HairDetails = hair;
-            Birthday = birthdate;
+            Birthdate = birthday;
             EyeColor = eyeColor;
         }
         // Överskriden ToString-metod för att skapa en strängrepresentation av objektet.
@@ -31,7 +31,7 @@ namespace Arvidsson_Mattias_Labration3
         {
             return  $"Gender: {Gender}\n" +
                     $"Hair: Length - {HairDetails.HairLength}cm, Color - {HairDetails.HairColor}\n" +
-                    $"Birthday: {Birthday.ToShortDateString()}\n" +
+                    $"Birthday: {Birthdate.ToShortDateString()}\n" +
                     $"Eyecolor: {EyeColor}";
         }
     }
